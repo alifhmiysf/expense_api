@@ -16,3 +16,13 @@ Repo ini untuk belajar Backend Laravel + Security Basic (Roadmap 90 Hari).
 - [x] Login Endpoint (Output Token).
 - [x] Logout Endpoint (Revoke Token).
 - [x] Protect Route Middleware (`auth:sanctum`).
+
+
+
+### 3. Core Transaction Logic (Minggu 2)
+- [x] **Validasi Input**: Implementasi `StoreTransactionRequest` untuk mencegah data sampah.
+- [x] **Create Transaction**: Endpoint `POST /api/transactions` sukses menyimpan data.
+- [x] **Relasi Otomatis**: Transaksi otomatis tersambung ke User yang sedang login.
+- [ ] API Resource (Format JSON Cantik).
+- [ ] Pagination & Filtering.
+- [ ] Update & Delete Transaction.
