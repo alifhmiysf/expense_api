@@ -11,13 +11,28 @@ use App\Http\Resources\TransactionResource;
 
 class TransactionController extends Controller
 {
-    // 1. INDEX (Lihat semua data)
     public function index(Request $request)
     {
-        $transactions = $request->user()->transactions()
-                                ->with('category')
-                                ->latest()
-                                ->paginate(10);
+        // 1. Mulai Query dari user yg login & load relasi category
+        $query = $request->user()->transactions()->with('category');
+
+        // 2. FILTER: Bulan (Jika ada request month)
+        $query->when($request->month, function ($q) use ($request) {
+            $q->whereMonth('transaction_date', $request->month);
+        });
+
+        // 3. FILTER: Tahun (Jika ada request year)
+        $query->when($request->year, function ($q) use ($request) {
+            $q->whereYear('transaction_date', $request->year);
+        });
+
+        // 4. FILTER: Kategori (Jika ada request category_id)
+        $query->when($request->category_id, function ($q) use ($request) {
+            $q->where('category_id', $request->category_id);
+        });
+
+        // 5. Eksekusi: Ambil data terbaru & paginate
+        $transactions = $query->latest()->paginate(10);
 
         return TransactionResource::collection($transactions);
     }

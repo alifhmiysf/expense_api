@@ -23,4 +23,6 @@ Repo ini untuk belajar Backend Laravel + Security Basic (Roadmap 90 Hari).
 - [x] **Read**: Endpoint `GET /api/transactions` (Pagination + API Resource).
 - [x] **Update**: Endpoint `PUT /api/transactions/{id}` (Cek Kepemilikan Data).
 - [x] **Delete**: Endpoint `DELETE /api/transactions/{id}` (Soft/Hard Delete).
-- [ ] Filtering Lanjutan (Per bulan/kategori).
+- [x] Filtering Lanjutan (Per bulan/kategori).
+- [ ] Management Category (CRUD Kategori).
+- [ ] Dashboard Summary.
