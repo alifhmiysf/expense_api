@@ -23,6 +23,6 @@ Repo ini untuk belajar Backend Laravel + Security Basic (Roadmap 90 Hari).
 - [x] **Validasi Input**: Implementasi `StoreTransactionRequest` untuk mencegah data sampah.
 - [x] **Create Transaction**: Endpoint `POST /api/transactions` sukses menyimpan data.
 - [x] **Relasi Otomatis**: Transaksi otomatis tersambung ke User yang sedang login.
-- [ ] API Resource (Format JSON Cantik).
-- [ ] Pagination & Filtering.
+- [x] API Resource (Format JSON Cantik).
+- [x] Pagination & Filtering.
 - [ ] Update & Delete Transaction.
