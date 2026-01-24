@@ -28,5 +28,6 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Logout: POST /api/logout
     Route::post('/logout', [AuthController::class, 'logout']);
+    Route::get('/transactions', [TransactionController::class, 'index']);
     Route::post('/transactions', [TransactionController::class, 'store']);
 });
