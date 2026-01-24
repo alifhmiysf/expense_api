@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 // PENTING: Baris ini memanggil Controller yang tadi kamu buat
 use App\Http\Controllers\Api\AuthController;
-
+use App\Http\Controllers\Api\TransactionController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,5 +28,5 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Logout: POST /api/logout
     Route::post('/logout', [AuthController::class, 'logout']);
-    
+    Route::post('/transactions', [TransactionController::class, 'store']);
 });
