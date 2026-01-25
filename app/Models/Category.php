@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\softDeletes;
 use Laravel\Sanctum\HasApiTokens;
 class Category extends Model
 {
+    use HasFactory;
    // 3. Whitelist kolom yang boleh diisi manual
     protected $fillable = [
         'name',
