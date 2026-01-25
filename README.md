@@ -38,4 +38,4 @@ Repo ini untuk belajar Backend Laravel + Security Basic (Roadmap 90 Hari).
 - [x] **Rate Limiting**: Mencegah spam & brute force.
 - [x] **Logging & Audit Trail**: Mencatat aktivitas mencurigakan.
 - [x] **Change Password**: Fitur ganti password aman.
-- [ ] **Security Headers & Sanitization**: Anti XSS & HTTP Security.
+- [x] **Security Headers & Sanitization**: Anti XSS & HTTP Security.

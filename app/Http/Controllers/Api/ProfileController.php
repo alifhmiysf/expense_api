@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 // 👇 TAMBAHKAN BARIS INI!
 use Illuminate\Validation\Rule;
+use App\Models\ActivityLog; // <--- WAJIB DITAMBAHKAN
+
 
 class ProfileController extends Controller
 {

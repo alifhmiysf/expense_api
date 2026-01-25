@@ -14,7 +14,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->append(\App\Http\Middleware\SecurityHeadersMiddleware::class);
+        // 👇 TAMBAHKAN INI (Pastikan import class-nya di atas ya, atau pakai path lengkap)
+        $middleware->append(\App\Http\Middleware\XssSanitizer::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->render(function (NotFoundHttpException $e, Request $request) {    
@@ -26,6 +28,7 @@ return Application::configure(basePath: dirname(__DIR__))
         }
         });
 
+        
         $exceptions->render(function(ThrottleRequestsException $e, Request $request){
             if($request->is('api/*')){
                 return response()->json([
