@@ -11,8 +11,12 @@ class Category extends Model
     protected $fillable = [
         'name',
         'type', // income / expense
+        'user_id'
     ];
     
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
     // Relasi (Opsional, tapi bagus ada)
     public function transactions()
     {
