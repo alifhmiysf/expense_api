@@ -9,7 +9,7 @@ use App\Http\Controllers\Api\TransactionController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\DashboardController;
 use App\Http\Controllers\Api\ProfileController;
-
+use App\Http\Controllers\Api\PasswordController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -61,4 +61,7 @@ Route::middleware('auth:sanctum')->group(function () {
     // apiResource menghandle CRUD lengkap Transaksi
     Route::apiResource('transactions', TransactionController::class);
 
+
+    //update password
+    Route::post('/password', [PasswordController::class, 'update']);
 });

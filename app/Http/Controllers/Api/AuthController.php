@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use App\Models\ActivityLog;
 
 class AuthController extends Controller
 {
@@ -29,7 +30,7 @@ class AuthController extends Controller
 
         // Buat Token (Tiket masuk)
         $token = $user->createToken('auth_token')->plainTextToken;
-
+            ActivityLog::record($user->id, 'REGISTER', 'User registered new account');
         // Kirim Response JSON
         return response()->json([
             'message' => 'User created successfully',
@@ -57,7 +58,7 @@ class AuthController extends Controller
 
         // Kalau sukses, beri token baru
         $token = $user->createToken('auth_token')->plainTextToken;
-
+        ActivityLog::record($user->id, 'LOGIN', 'User logged in via API');
         return response()->json([
             'message' => 'Login success',
             'token' => $token,

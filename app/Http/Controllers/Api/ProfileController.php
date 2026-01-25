@@ -30,7 +30,7 @@ class ProfileController extends Controller
             $user->avatar = $path;
         }
         $user->save();
-
+        ActivityLog::record($user->id, 'UPDATE_PROFILE', 'User updated profile details or avatar');
         return response()->json([
             'message' => 'Profile updated successfully',
             'data' => $user,

@@ -36,5 +36,6 @@ Repo ini untuk belajar Backend Laravel + Security Basic (Roadmap 90 Hari).
 - [x] Symlink Storage untuk akses publik aman.
 - [x] **Standardized Error Handling**: Format JSON error yang konsisten & tidak bocor info server.
 - [x] **Rate Limiting**: Mencegah spam & brute force.
-- [ ] **Logging & Audit Trail**: Mencatat aktivitas mencurigakan.
+- [x] **Logging & Audit Trail**: Mencatat aktivitas mencurigakan.
+- [x] **Change Password**: Fitur ganti password aman.
 - [ ] **Security Headers & Sanitization**: Anti XSS & HTTP Security.
