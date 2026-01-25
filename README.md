@@ -44,5 +44,5 @@ Repo ini untuk belajar Backend Laravel + Security Basic (Roadmap 90 Hari).
 - [x] **Testing Environment**: Konfigurasi PHPUnit & SQLite In-Memory.
 - [x] **Automated Auth Test**: Testing Register, Login, & Logout otomatis.
 - [x] **Feature Testing**: Testing CRUD Transaksi & Validasi Data.
-- [ ] **CI/CD Pipeline**: Automasi testing via GitHub Actions.
+- [x] **CI/CD Pipeline**: Automasi testing via GitHub Actions.
 - [ ] **Deployment**: Deploy aplikasi ke server production (Railway/VPS).
