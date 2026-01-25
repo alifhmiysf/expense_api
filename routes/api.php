@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\TransactionController;
 use App\Http\Controllers\Api\CategoryController; // <--- TAMBAHKAN INI
+use App\Http\Controllers\Api\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,4 +34,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/transactions', [TransactionController::class, 'store']);
     Route::apiResource('transactions', TransactionController::class);
     Route::apiResource('categories', CategoryController::class);
+    Route::get('/dashboard', [DashboardController::class, 'index']);
 });

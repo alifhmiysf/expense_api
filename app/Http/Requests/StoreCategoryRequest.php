@@ -23,7 +23,7 @@ class StoreCategoryRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'type' => 'required|in:expense, income',
+            'type' => 'required|in:expense,income',
         ];
     }
 }
