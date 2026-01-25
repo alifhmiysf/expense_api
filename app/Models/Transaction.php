@@ -5,11 +5,11 @@ namespace App\Models;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\softDeletes;
+use Illuminate\Database\Eloquent\SoftDeletes; // ✅ Pakai S Besar
 
 class Transaction extends Model
 {
-    use HasFactory, softDeletes;
+    use HasFactory, SoftDeletes;
 
     protected $fillable =[
         'user_id',
