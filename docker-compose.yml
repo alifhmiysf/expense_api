@@ -1,0 +1,46 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: expense-api-app
+    container_name: expense-api-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/var/www
+    networks:
+      - expense-network
+
+  db:
+    image: mysql:8.0
+    container_name: expense-api-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: expense_api
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - expense-network
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    ports:
+      - "4040:4040"
+    command:
+      - "http"
+      - "app:8000"
+    environment:
+      - NGROK_AUTHTOKEN=36yCbR9N3WX3GA4LscZUnFWLIKj_2VeywZ9JFKEKKYf4ZB3mi
+    networks:
+      - expense-network
+    depends_on:
+      - app
+
+networks:
+  expense-network:
+    driver: bridge
+
+volumes:
+  dbdata:

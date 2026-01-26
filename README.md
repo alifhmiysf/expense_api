@@ -45,4 +45,31 @@ Repo ini untuk belajar Backend Laravel + Security Basic (Roadmap 90 Hari).
 - [x] **Automated Auth Test**: Testing Register, Login, & Logout otomatis.
 - [x] **Feature Testing**: Testing CRUD Transaksi & Validasi Data.
 - [x] **CI/CD Pipeline**: Automasi testing via GitHub Actions.
-- [ ] **Deployment**: Deploy aplikasi ke server production (Railway/VPS).
+- [x] **Deployment**: Deploy aplikasi ke server production (Railway/VPS).
+- [ ] **Service Repository Pattern**: Pemisahan logika bisnis dari Controller ke Service Layer untuk Clean Code.
+- [ ] **API Documentation (Swagger/OpenAPI)**: Implementasi dokumentasi API otomatis yang bisa diakses via browser.
+- [ ] **Database Optimization**:
+    - [ ] Indexing pada kolom pencarian (user_id, date, category_id).
+    - [ ] Analisis Query untuk memastikan performa tetap kencang di jutaan baris data.
+ [ ] **Database Transaction & Locking**:
+    [ ] Implementasi `DB::transaction()` untuk menjamin integritas data keuangan.
+     [ ] Penggunaan Row Locking untuk mencegah Race Condition pada saldo.
+
+### 5. DevOps & Containerization
+[x] Memahami Dockerfile & Docker Compose.
+
+[x] Konfigurasi docker-compose.yml untuk orchestrasi App & MySQL.
+
+[x] Isolasi environment pengembangan agar konsisten di semua mesin (Lulus uji pindah dari Windows Local ke Docker).
+
+[x] Implementasi Ngrok untuk akses publik sementara tanpa kartu kredit.
+
+[x] Konfigurasi APP_URL dinamis sesuai tunnel publik.
+
+[x] [BONUS] Implementasi Docker Entrypoint Script (entrypoint.sh) untuk otomatisasi migrasi dan startup server.
+
+[ ] Mastering Linux CLI & User Management (Target Hari 31).
+
+[ ] Setup VPS (Nginx, PHP-FPM, MySQL hardening).
+
+
