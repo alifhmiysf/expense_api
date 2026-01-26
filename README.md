@@ -56,20 +56,20 @@ Repo ini untuk belajar Backend Laravel + Security Basic (Roadmap 90 Hari).
      [ ] Penggunaan Row Locking untuk mencegah Race Condition pada saldo.
 
 ### 5. DevOps & Containerization
-[x] Memahami Dockerfile & Docker Compose.
+- [x] Docker Foundation: Memahami Dockerfile & Docker Compose.
 
-[x] Konfigurasi docker-compose.yml untuk orchestrasi App & MySQL.
+- [x] Service Orchestration: Konfigurasi docker-compose.yml untuk App & MySQL.
 
-[x] Isolasi environment pengembangan agar konsisten di semua mesin (Lulus uji pindah dari Windows Local ke Docker).
+- [x] Environment Isolation: Menjamin konsistensi sistem di berbagai mesin (Lulus uji Windows ke Docker).
 
-[x] Implementasi Ngrok untuk akses publik sementara tanpa kartu kredit.
+- [x] External Access: Implementasi Ngrok untuk akses publik tanpa kartu kredit.
 
-[x] Konfigurasi APP_URL dinamis sesuai tunnel publik.
+- [x] Dynamic Configuration: Setup APP_URL dinamis mengikuti tunnel Ngrok.
 
-[x] [BONUS] Implementasi Docker Entrypoint Script (entrypoint.sh) untuk otomatisasi migrasi dan startup server.
+- [x] Automation Script: [BONUS] Implementasi entrypoint.sh untuk auto-migrate & startup.
 
-[ ] Mastering Linux CLI & User Management (Target Hari 31).
+- [ ] Linux Mastery: Mastering Linux CLI & User Management (Target Hari 31).
 
-[ ] Setup VPS (Nginx, PHP-FPM, MySQL hardening).
+- [ ] Production Setup: Setup VPS (Nginx, PHP-FPM, MySQL hardening).
 
 
