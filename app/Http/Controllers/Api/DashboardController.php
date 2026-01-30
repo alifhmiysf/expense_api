@@ -33,6 +33,20 @@ class DashboardController extends Controller
         // 4. Hitung Sisa Saldo
         $balance = $totalIncome - $totalExpense;
 
+
+        // 3. LOGIKA BARU: Top 3 Pengeluaran per Kategori
+    $topExpenses = $transactions
+        ->where('category.type', 'expense')
+        ->groupBy('category.name')
+        ->map(fn($items, $name) => [
+            'category' => $name,
+            'total' => (float) $items->sum('amount')
+        ])
+        ->sortByDesc('total')
+        ->take(3)
+        ->values();
+
+        
         // 5. Return JSON
         return response()->json([
             'month' => $month,

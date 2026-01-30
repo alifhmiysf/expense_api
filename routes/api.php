@@ -59,8 +59,9 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // --- 💸 Main Feature: Transactions ---
     // apiResource menghandle CRUD lengkap Transaksi
-    Route::apiResource('transactions', TransactionController::class);
-
+   
+Route::apiResource('transactions', TransactionController::class);
+Route::post('transactions/{id}/restore', [TransactionController::class, 'restore']); // Tambah ini
 
     //update password
     Route::post('/password', [PasswordController::class, 'update']);

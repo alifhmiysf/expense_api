@@ -19,57 +19,42 @@ Repo ini untuk belajar Backend Laravel + Security Basic (Roadmap 90 Hari).
 
 ### 3. Core Transaction Logic 
 - [x] **Validasi Input**: Implementasi `StoreTransactionRequest` & `UpdateTransactionRequest`.
-- [x] **Create**: Endpoint `POST /api/transactions` (Auto User ID).
+- [x] **Create**: Endpoint `POST /api/transactions` (Auto User ID & Activity Log).
 - [x] **Read**: Endpoint `GET /api/transactions` (Pagination + API Resource).
-- [x] **Update**: Endpoint `PUT /api/transactions/{id}` (Cek Kepemilikan Data).
-- [x] **Delete**: Endpoint `DELETE /api/transactions/{id}` (Soft/Hard Delete).
+- [x] **Update**: Endpoint `PUT /api/transactions/{id}` (Cek Kepemilikan Data via Policy).
+- [x] **Delete**: Endpoint `DELETE /api/transactions/{id}` (Soft Delete aktif).
+- [x] **Restore**: Fitur mengembalikan data dari tong sampah (`POST /api/transactions/{id}/restore`).
 - [x] Filtering Lanjutan (Per bulan/kategori).
 - [x] Management Category (CRUD Kategori).
-- [x] Dashboard Summary.
-
-
+- [x] **Advanced Dashboard**: Summary Balance & Insight Top 3 Pengeluaran Terbesar.
 
 ### 4. Professional & Secure Backend 
-- [x] **Secure File Upload**:
-- [x] Fitur Update Profile (Nama & Email).
-- [x] Upload Avatar dengan validasi ketat (MIME Type & Extension).
-- [x] Symlink Storage untuk akses publik aman.
-- [x] **Standardized Error Handling**: Format JSON error yang konsisten & tidak bocor info server.
-- [x] **Rate Limiting**: Mencegah spam & brute force.
-- [x] **Logging & Audit Trail**: Mencatat aktivitas mencurigakan.
+- [x] **Secure File Upload**: Fitur Update Profile & Avatar (MIME Type Validation).
+- [x] **Authorization (Policy)**: Proteksi data antar user (Security Hardening).
+- [x] **Standardized Error Handling**: Format JSON error konsisten & APP_DEBUG management.
+- [x] **Rate Limiting**: Implementasi Throttle (60 req/min) untuk mencegah brute force.
+- [x] **Logging & Audit Trail**: ActivityLog untuk setiap aksi (Register, Login, Create, Delete, Restore).
 - [x] **Change Password**: Fitur ganti password aman.
-- [x] **Security Headers & Sanitization**: Anti XSS & HTTP Security.
+- [x] **Security Headers & Sanitization**: Proteksi dasar API terhadap XSS/Injection.
 
-### 4. Quality Assurance & Deployment 
+### 5. Quality Assurance & Deployment 
 - [x] **Testing Environment**: Konfigurasi PHPUnit & SQLite In-Memory.
 - [x] **Automated Auth Test**: Testing Register, Login, & Logout otomatis.
 - [x] **Feature Testing**: Testing CRUD Transaksi & Validasi Data.
 - [x] **CI/CD Pipeline**: Automasi testing via GitHub Actions.
-- [x] **Deployment**: Deploy aplikasi ke server production (Railway/VPS).
-- [ ] **Service Repository Pattern**: Pemisahan logika bisnis dari Controller ke Service Layer untuk Clean Code.
-- [ ] **API Documentation (Swagger/OpenAPI)**: Implementasi dokumentasi API otomatis yang bisa diakses via browser.
-- [ ] **Database Optimization**:
-    - [ ] Indexing pada kolom pencarian (user_id, date, category_id).
-    - [ ] Analisis Query untuk memastikan performa tetap kencang di jutaan baris data.
- [ ] **Database Transaction & Locking**:
-    [ ] Implementasi `DB::transaction()` untuk menjamin integritas data keuangan.
-     [ ] Penggunaan Row Locking untuk mencegah Race Condition pada saldo.
+- [x] **Deployment**: Deploy aplikasi ke server production (VPS Simulasi).
+- [x] **Clean Code Preparation**: Penggunaan API Resources & Form Requests.
 
-### 5. DevOps & Containerization
-- [x] Docker Foundation: Memahami Dockerfile & Docker Compose.
+### 6. DevOps & Containerization
+- [x] **Linux Mastery**: CLI, Permissions, & Directory Structure `/var/www/`.
+- [x] **Production Setup**: Konfigurasi PHP 8.3 & MySQL 8.0 di Ubuntu.
+- [x] **Dockerization**:
+    - [x] `Dockerfile` & `docker-compose.yml` (Isolasi App & DB).
+    - [x] Optimasi Docker (Hapus version obsolete & Cache Optimization).
+- [x] **Advanced Networking**:
+    - [x] Reverse SSH Tunneling untuk bypass NAT.
+    - [x] Setup Ngrok untuk akses publik dinamis (Auto-update URL).
 
-- [x] Service Orchestration: Konfigurasi docker-compose.yml untuk App & MySQL.
-
-- [x] Environment Isolation: Menjamin konsistensi sistem di berbagai mesin (Lulus uji Windows ke Docker).
-
-- [x] External Access: Implementasi Ngrok untuk akses publik tanpa kartu kredit.
-
-- [x] Dynamic Configuration: Setup APP_URL dinamis mengikuti tunnel Ngrok.
-
-- [x] Automation Script: [BONUS] Implementasi entrypoint.sh untuk auto-migrate & startup.
-
-- [ ] Linux Mastery: Mastering Linux CLI & User Management (Target Hari 31).
-
-- [ ] Production Setup: Setup VPS (Nginx, PHP-FPM, MySQL hardening).
-
-
+### 7. Final Status: COMPLETE 
+- [x] Semua fitur utama Backend & Security sesuai Roadmap 90 Hari telah diimplementasikan.
+- [x] Sistem siap untuk dikembangkan ke tahap Frontend atau Mobile App.

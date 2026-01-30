@@ -10,18 +10,18 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::create('transactions', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
-            $table->decimal('amount',15,2);
-            $table->string('description');
-            $table->date('transaction_date');
-            $table->timestamps();
-            $table->softDeletes();
-        });
-    }
+{
+    Schema::create('transactions', function (Blueprint $table) {
+        $table->id();
+        $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+        $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+        $table->decimal('amount', 15, 2);
+        $table->string('description')->nullable(); // Ditambah nullable agar tidak error jika kosong
+        $table->date('transaction_date'); 
+        $table->timestamps();
+        $table->softDeletes();
+    });
+}
 
     /**
      * Reverse the migrations.
